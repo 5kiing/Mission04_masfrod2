@@ -1,0 +1,16 @@
+﻿/* Mission 4 assignment masfrod2
+    Creator: Mason Frodsham */
+
+/* default image settings */
+img{
+    width: 40%;
+    height: auto;
+}
+
+/* Default form label size and settings */
+label {
+    font-size: 20px;
+    color: darkcyan;
+    width: 150px;
+    display: inline-block;
+}
