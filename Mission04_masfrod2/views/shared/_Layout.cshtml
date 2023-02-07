@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+@* layout template for entire program *@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!-- bootstrap connection -->
+    <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- tab icon -->
+    <link rel="icon" href="\img\letterM.png">
+    <!-- default css override -->
+    <link href="css/default.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+
+    <nav>
+        <a asp-controller="mission05" asp-action="Index">Home</a>
+        <a asp-controller="mission05" asp-action="gradeCalc">Grade Calculator</a>
+    </nav>
+
+    <h1>@ViewData["Head"]</h1>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>Frog Consulting</footer>
+
+    <!-- jquery and js file connections -->
+    <script src="library/jquery/jquery-3.6.3.min.js"></script>
+    <script src="library/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

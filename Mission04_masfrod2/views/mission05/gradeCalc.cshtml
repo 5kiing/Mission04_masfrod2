@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+     PROGRAM CREATED BY MASON FRODSHAM
+    MISSION_5 masfrod2
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+    ViewData["Head"] = "Grade Calculator";
+
+}
+
+<!--Import grade calc model from _ViewImports-->
+@model gradeCalcModel;
+<!-- grade calculator and form inputs -->
+<form method="post">
+    <label>Assignments:</label>
+    <input id="txtAssignments" asp-for="Assignments" /><br />
+    <label>Group Project:</label>
+    <input id="txtGroup" asp-for="Group" /><br />
+    <label>Quizzes:</label>
+    <input id="txtQuiz" asp-for="Quiz" /><br />
+    <label>Midterm Exam:</label>
+    <input id="txtMidterm" asp-for="Midterm" /><br />
+    <label>Final Exam:</label>
+    <input id="txtFinal" asp-for="Final" /><br />
+    <label>INTEX:</label>
+    <input id="txtIntex" asp-for="Intex" /><br />
+    <input id="btnSend" type="submit" value="Submit" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+<br />
+
+<!-- write final grade and letter grade from jquery to document -->
+<h3>Final Grade</h3>
+<br />
+<input type="text" id="grade" readonly>
+<br />
+<h3>Letter Grade</h3>
+<br />
+<input type="text" id="letterGrade" readonly>
+<br />
+
+<script src="js/GradeCalc.js"></script>
